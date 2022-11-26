@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::post('/login','AuthController@login');
 Route::get('/dashboard','PageController@dashboard');
+Route::get('/register','AuthController@register');
+Route::post('/register-form','AuthController@register_form');

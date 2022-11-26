@@ -13,6 +13,7 @@
   <h2 class="active"> sign in </h2>
 
   <h2 class="nonactive"> sign up </h2>
+ 
 
   @if(Session::has('fail'))
        <p class="alert alert-danger" style="text-align: center; color: red;"><i class = "fa fa-times-circle" style="color: red;"></i> {{ Session::get('fail') }}</p>
@@ -40,17 +41,38 @@
     <button class="signin" type="submit">
       Sign In
     </button>
+</form>
+
+ 
+
+
 
 
     <hr>
-
-    <a href="#">Forgot Password?</a>
-  </form>
-
+    <a class="signup" type="button" href="{{('/register')}}">
+      Register
+</a>
+    
+  
 </div>
 <style>
     body,
 .signin {
+  background-color: #d3d3d3;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.signup{
+  background-color: #d3d3d3;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  width:200px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+a {
   background-color: #d3d3d3;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
